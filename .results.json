@@ -1,0 +1,50 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-07-23T05:28:52.386Z",
+    "end": "2023-07-23T05:28:52.897Z",
+    "duration": 511
+  },
+  "tests": [
+    {
+      "title": "is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
+      "fullTitle": "index.js cats is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected [Function: cats] to be an array",
+        "showDiff": false,
+        "stack": "AssertionError: expected [Function: cats] to be an array\n    at Context.<anonymous> (test/indexTest.js:4:36)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
+      "fullTitle": "index.js cats is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected [Function: cats] to be an array",
+        "showDiff": false,
+        "stack": "AssertionError: expected [Function: cats] to be an array\n    at Context.<anonymous> (test/indexTest.js:4:36)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"appends a cat to the end of the cats array\"",
+      "fullTitle": "index.js Array functions \"before each\" hook for \"appends a cat to the end of the cats array\"",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: cats.push is not a function\n    at Context.<anonymous> (test/indexTest.js:12:12)",
+        "message": "cats.push is not a function"
+      }
+    }
+  ],
+  "passes": []
+}
