@@ -1,87 +1,47 @@
-//1
-function cats(x) {
-    x=["Milo", "Otis", "Garfield"];
-    console.log(x);
-    
-}
-cats();
+let cats = ["Milo", "Otis", "Garfield"];
 
-//2
-function ArrayFunction(cats) {
-    cats=[];
-    cats.push("Milo", "Otis", "Garfield");
-    
-    console.log(cats);
-}
-ArrayFunction();
-
-//3
-function destructivelyAppendCat(cats){
-    cats=["Milo", "Otis", "Garfield"] ;
-    cats.push('Ralph');
-    console.log(cats);
-}
-destructivelyAppendCat();
-
-//4
-function destructivelyPrependCat(cats){
-    cats=["Milo", "Otis", "Garfield"];
-    cats.unshift('Bob');
-    console.log(cats);
-}
-destructivelyPrependCat();
-
-//5
-function destructivelyRemoveLastCat(cats){
-    cats=["Milo", "Otis", "Garfield"];
-    cats.pop();
-    console.log(cats);
+function destructivelyAppendCat(name) {
+  cats.push(name);
 }
 
-destructivelyRemoveLastCat();
-
-//6
-function destructivelyRemoveFirstCat(cats){
-    cats=["Milo", "Otis", "Garfield"];
-    cats.shift();
-    console.log(cats);    
+function destructivelyPrependCat(name) {
+  cats.unshift(name);
 }
-destructivelyRemoveFirstCat();
 
-//7
-function appendCat(cats){
-    cats=["Milo", "Otis", "Garfield"];
-    pussy = [...cats,'Broom']; 
-    console.log(pussy);
-    console.log(cats);
+function destructivelyRemoveLastCat() {
+  cats.pop();
 }
-appendCat();
 
-//8
-function prependCat(cats) {
-    cats=["Milo", "Otis", "Garfield"];
-    pussy= ['Arnold',...cats];
-    console.log(pussy);
-    console.log(cats);  
+function destructivelyRemoveFirstCat() {
+  cats.shift();
 }
-prependCat();
 
-//9
-function removeLastCat(cats){
-    cats=["Milo", "Otis", "Garfield"];
-    pussy = [...cats.slice(0,2)];
-    console.log(pussy);  
-    console.log(cats); 
+function appendCat(name) {
+  return [...cats, name];
 }
-removeLastCat();
 
-//10
-function removeFirstCat(cats){
-    cats=["Milo", "Otis", "Garfield"];
-    pussy = [...cats.slice(1)]
-    console.log(pussy);
-    console.log(cats);
+function prependCat(name) {
+  return [name, ...cats];
 }
-removeFirstCat();
+
+function removeLastCat() {
+  return cats.slice(0, -1);
+}
+
+function removeFirstCat() {
+  return cats.slice(1);
+}
+
+module.exports = {
+  destructivelyAppendCat,
+  destructivelyPrependCat,
+  destructivelyRemoveLastCat,
+  destructivelyRemoveFirstCat,
+  appendCat,
+  prependCat,
+  removeLastCat,
+  removeFirstCat
+};
+
 
 
